@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'rexml', '~> 3.2', '>= 3.2.4'
 
 # bootstrap4を使用するためのgem
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap-sass'
 gem 'jquery-rails'
 
 # Use Active Storage variant
