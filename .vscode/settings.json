@@ -1,3 +1,21 @@
 {
   "solargraph.useBundler": false,
+  "solargraph.commandPath": "/home/utimori/.rbenv/shims/solargraph",
+  "ruby.intellisense": "rubyLocate",
+  "ruby.useBundler": true,
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "ruby.locate": {
+    "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}",
+    "include": "**/*.rb"
+  },
+  "ruby.useLanguageServer": true,
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  "files.associations": {
+    "*.erb": "erb"
+  },
+  "emmet.triggerExpansionOnTab": true
 }

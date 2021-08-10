@@ -40,6 +40,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'solargraph', require: false
+  gem 'rubocop', require: false
 end
 
 group :development do
@@ -60,6 +62,7 @@ group :test do
   # テスト結果を見やすくするgem
   gem 'minitest'
   gem 'minitest-reporters'
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
