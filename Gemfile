@@ -7,8 +7,6 @@ ruby '3.0.2'
 gem 'rails', '~> 6.0.4'
 #  ハッシュ関数用gem
 gem 'bcrypt'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -42,6 +40,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'solargraph', require: false
   gem 'rubocop', require: false
+  gem 'sqlite3', '1.4.1'
 end
 
 group :development do
@@ -63,6 +62,10 @@ group :test do
   gem 'minitest'
   gem 'minitest-reporters'
   gem 'rails-controller-testing'
+end
+
+group :production do
+  gem 'pg', '1.1.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
