@@ -40,7 +40,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'solargraph', require: false
   gem 'rubocop', require: false
-  gem 'sqlite3', '1.4.1'
+  gem 'sqlite3', '1.4.2'
 end
 
 group :development do
