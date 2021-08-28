@@ -5,8 +5,13 @@ ruby '3.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.4'
-#  ハッシュ関数用gem
+# ハッシュ関数用gem
 gem 'bcrypt'
+# 仮想ユーザー作成用gem
+gem 'faker', '2.1.2'
+# ページネーション実装用gem
+gem 'kaminari'
+gem 'bootstrap-will_paginate', '1.0.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
