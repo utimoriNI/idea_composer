@@ -1,0 +1,3 @@
+<%= @user.name %>さん、ようこそIdeaComposerへ！ アカウント作成を完了するには下のリンクをクリックして、アカウントの有効化を行ってください。
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

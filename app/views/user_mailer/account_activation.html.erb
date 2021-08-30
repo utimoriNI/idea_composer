@@ -1,0 +1,6 @@
+<h1>IdeaComposer</h1>
+
+<p><%= @user.name %>さん、ようこそIdeaComposerへ！</p>
+<p>アカウント作成を完了するには、下のリンクをクリックしてアカウントの有効化を行ってください。</p>
+
+<%= link_to "アカウントの有効化", edit_account_activation_url(@user.activation_token, email: @user.email) %>
