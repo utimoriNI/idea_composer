@@ -18,4 +18,19 @@ class UserMailerTest < ActionMailer::TestCase
     assert_match CGI.escape(user.email),   mail.text_part.body.encoded, ["メールアドレスが一致しません"]
     assert_match CGI.escape(user.email),   mail.html_part.body.encoded, ["メールアドレスが一致しません"]
   end
+
+  test "password_reset" do
+    user = users(:michael)
+    user.reset_token = User.new_token
+    mail = UserMailer.password_reset(user)
+    assert_equal "パスワードの変更", mail.subject
+    assert_equal [user.email], mail.to
+    assert_equal ["noreply@example.com"], mail.from
+    # メール内に有効化トークンがある
+    assert_match user.reset_token, mail.text_part.body.encoded, ["トークンが一致しません"]
+    assert_match user.reset_token, mail.html_part.body.encoded, ["トークンが一致しません"]
+    # メール内にメールアドレスがある
+    assert_match CGI.escape(user.email), mail.text_part.body.encoded, ["メールアドレスが一致しません"]
+    assert_match CGI.escape(user.email), mail.html_part.body.encoded, ["メールアドレスが一致しません"]
+  end
 end
